@@ -240,7 +240,13 @@ void KMeansPP::printCentroids() const {
 }
 
 void KMeansPP::printClusters() const {
-    // Implement printing clusters here
+    for (size_t i = 0; i < clusters.size(); ++i) {
+        std::cout << "Cluster " << i + 1 << ":\n";
+        for (const auto& node : clusters[i]) {
+            std::cout << "Node " << node.getIdentity() << " (" << node.getX() << ", " << node.getY() << ")\n";
+        }
+        std::cout << "\n";
+    }
 }
 void KMeansPP::plotScatter() const {
     // Create a blank canvas to draw the scatter plot
