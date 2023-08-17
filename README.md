@@ -44,7 +44,7 @@ This implementation consists of three main classes:
 3. Navigate to the project folder.
 4. Compile the code by running:
 ```
-g++ main.cpp -o kmeans
+g++ -o kmeans main.cpp `pkg-config --cflags --libs opencv4`
 ```
 5. Run the executable:
 ```
